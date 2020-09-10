@@ -40,6 +40,38 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1349.199999999999818, 101.0, 45.0, 22.0 ],
+					"text" : "update"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1582.0, 125.0, 150.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 31.0, 4.0, 150.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-23",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -175,6 +207,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 345.0, 322.0, 35.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "out 2"
 				}
 
@@ -272,11 +308,11 @@
 				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "newobj",
-					"numinlets" : 8,
-					"numoutlets" : 8,
-					"outlettype" : [ "", "", "", "", "", "", "", "" ],
-					"patching_rect" : [ 276.0, 71.0, 1092.200000000000045, 22.0 ],
-					"text" : "route addtrack clearall loadbuffer savebuffer analyze play stop"
+					"numinlets" : 9,
+					"numoutlets" : 9,
+					"outlettype" : [ "", "", "", "", "", "", "", "", "" ],
+					"patching_rect" : [ 276.0, 71.0, 1245.514285714285506, 22.0 ],
+					"text" : "route addtrack clearall loadbuffer savebuffer analyze play stop update"
 				}
 
 			}
@@ -420,6 +456,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"source" : [ "obj-13", 7 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"midpoints" : [ 438.814285714285688, 216.0, 898.757142857142867, 216.0 ],
 					"source" : [ "obj-14", 0 ]
@@ -437,7 +480,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"midpoints" : [ 592.128571428571377, 137.0, 285.5, 137.0 ],
+					"midpoints" : [ 592.128571428571377, 184.0, 285.5, 184.0 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
@@ -445,7 +488,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"midpoints" : [ 745.442857142857179, 137.0, 285.5, 137.0 ],
+					"midpoints" : [ 745.442857142857179, 184.0, 285.5, 184.0 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -491,6 +534,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 1358.699999999999818, 178.0, 898.757142857142867, 178.0 ],
+					"source" : [ "obj-31", 0 ]
 				}
 
 			}
@@ -573,20 +624,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "leaky_bucket.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/esempi_milano",
-				"patcherrelativepath" : "../../esempi_milano",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "leaky_core.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/esempi_milano",
-				"patcherrelativepath" : "../../esempi_milano",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "syllable_play_engine.maxpat",
 				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
@@ -632,6 +669,14 @@
 			}
 , 			{
 				"name" : "mubu.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "mubu.concat~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "mubu.granular~.mxo",
 				"type" : "iLaX"
 			}
  ],
