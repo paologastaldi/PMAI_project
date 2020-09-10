@@ -463,8 +463,9 @@
 			}
 , 			{
 				"box" : 				{
+					"format" : 6,
 					"id" : "obj-83",
-					"maxclass" : "number",
+					"maxclass" : "flonum",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -475,8 +476,9 @@
 			}
 , 			{
 				"box" : 				{
+					"format" : 6,
 					"id" : "obj-82",
-					"maxclass" : "number",
+					"maxclass" : "flonum",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -491,9 +493,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 539.0, 568.0, 29.5, 22.0 ],
-					"text" : "int"
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 539.0, 568.0, 31.0, 22.0 ],
+					"text" : "float"
 				}
 
 			}
@@ -503,9 +505,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 353.0, 568.0, 29.5, 22.0 ],
-					"text" : "int"
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 353.0, 568.0, 31.0, 22.0 ],
+					"text" : "float"
 				}
 
 			}
@@ -832,7 +834,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-80", 1 ],
-					"midpoints" : [ 373.0, 530.0, 559.0, 530.0 ],
+					"midpoints" : [ 373.0, 530.0, 560.5, 530.0 ],
 					"order" : 0,
 					"source" : [ "obj-68", 0 ]
 				}
@@ -973,7 +975,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "glottal_core.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/project",
+				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
