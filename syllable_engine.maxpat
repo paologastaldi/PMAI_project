@@ -40,6 +40,42 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-33",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 535.0, 630.0, 34.0, 20.0 ],
+					"text" : "stats"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-8",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 483.0, 629.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 483.0, 599.0, 29.5, 22.0 ],
+					"text" : "/"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-150",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -78,7 +114,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 255.166666666666629, 656.0, 107.0, 20.0 ],
+					"patching_rect" : [ 255.166666666666629, 653.0, 107.0, 20.0 ],
 					"text" : "current track index"
 				}
 
@@ -1017,7 +1053,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 204.166666666666629, 655.0, 50.0, 22.0 ]
+					"patching_rect" : [ 204.166666666666629, 652.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -1234,6 +1270,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-118", 1 ],
+					"order" : 1,
+					"source" : [ "obj-115", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 1 ],
+					"order" : 0,
 					"source" : [ "obj-115", 0 ]
 				}
 
@@ -1545,6 +1590,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-17", 1 ],
 					"midpoints" : [ 224.166666666666629, 807.0, 351.75, 807.0 ],
 					"source" : [ "obj-20", 3 ]
@@ -1610,7 +1662,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"order" : 0,
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-47", 0 ],
+					"order" : 1,
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -2078,35 +2139,35 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "glottal_usystem.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/project",
+				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "glottal_core.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/project",
+				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "wek_comm.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/project",
+				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "extractor_usystem.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/project",
+				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "extractor.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/project",
+				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
