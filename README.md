@@ -11,11 +11,11 @@
 
 + [Abstract](#abstract)
 + [Obiettivi](#obiettivi)
++ [Come funziona](#come-funziona)
 + [Risultati](#risultati)
 + [Dettagli tecnici](#dettagli-tecnici)
-    - [Avvio](#avvio)
-    - [Funzionamento](#funzionamento)
-    - [Dipendenze](#dipendenze)
+    - [Più nel dettaglio](#più-nel-dettaglio)
+    - [Dipendenze esterne](#dipendenze-esterne)
     - [Difficoltà riscontrate](#difficoltà-riscontrate)
 
 ## Abstract
@@ -32,21 +32,34 @@ Gli obiettivi del progetto sono di:
 - analizzare ogni sillaba e riuscire a trovarne dei parametri caratterizzanti tali da descriverla nella maniera più accurata possibile
 - ricreare un discorso "in diretta" con i frammenti di un altro discorso precedentemente analizzati
 
+## Come funziona
+
+La patch principale è ```index```. Questa rimanda a 3 sottopatch, chiamate ```wrapper```, che fanno da interfaccia al sistema vero e proprio racchiuso e gestito dalla patch ```voice_switch```.
+
+Una volta scelto un wrapper, se messo nella modalità presentazione verrà visualizzata una schermata simile a questa:
+
+![Wrapper](./images/wrapper_1.png)
+
+Gli step basilari per poter utilizzare la patch sono:
+- attivare l'audio
+- scegliere uno o più file audio da cui estrapolare i frammenti
+- far analizzare al sistema i file audio scelti
+
+Da qui in poi i vari wrapper permetto di fare azioni differenti.
+
+È possibile anche salvare l'analisi effettuata in precedenza con il pulsante *savebuffer*. Per ricaricarla nel sistema invece bisogna premere su *loadbuffer*, scegliere il file e quindi premere su *update*.
+
 ## Risultati
 
 Nella sottocartella ```examples``` è possibile trovare dei file  di esempio utilizzati per la taratura e il test del sistema.
 
-In particolare, i file che terminano con *_model* sono dei modelli precedentemente generati dal sistema e che possono essere caricati dalla patch con i pulsanti *load* e successivamente *train* (per l'aggiornamento dei buffer interni).
+In particolare, i file che terminano con *_model* sono dei modelli precedentemente generati dal sistema e che possono essere caricati dalla patch  come precendentemente descritto.
 
 I file che terminano con *_results* sono delle registrazioni ottenuti dal sistema. A volte sono del singolo risultato generato, a volte alternano l'audio originale con la parte generata.
 
 ## Dettagli tecnici
 
-### Avvio
-
-La patch principale è ```index```. Questa rimanda a 3 sottopatch, chiamate ```wrapper```, che fanno da interfaccia al sistema vero e proprio racchiuso e gestito dalla patch ```voice_switch```.
-
-### Funzionamento
+### Più nel dettaglio
 
 La patch (o meglio, l'insieme di patch) è basato su 4 parti principali, di cui 2 sono componenti di base e 2 invece di più alto livello.
 
@@ -66,7 +79,7 @@ Queste 2 patch appena descritte vengono utilizzate per l'analisi e il training d
 
 Per l'esecuzione invece si utilizza la patch ```syllable_play_engine```, che permette di rilevare ed analizzare "in diretta" le sillabe contenute nel segnale in ingresso, andare a cercare per ciascuna la sillaba più prossima dal set di training e riprodurla. 
 
-### Dipendenze
+### Dipendenze esterne
 
 Elenco dei pacchetti e programmi aggiuntivi esterni a Max necessari per il funzionamento della patch.
 
