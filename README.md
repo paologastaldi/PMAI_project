@@ -5,19 +5,23 @@
 | Progetto esame del 18-09-2020 | |
 | :- | :-: |
 | Versione | 1.0.0 |
-| Data | 10-09-2020 |
+| Data | 12-09-2020 |
 
 ## Indice
 
 + [Abstract](#abstract)
 + [Obiettivi](#obiettivi)
++ [Risultati](#risultati)
 + [Dettagli tecnici](#dettagli-tecnici)
     - [Funzionamento](#funzionamento)
     - [Dipendenze](#dipendenze)
+    - [Difficoltà riscontrate](#difficoltà-riscontrate)
 
 ## Abstract
 
 Troppo spesso quando ascoltiamo un discorso ci facciamo influenzare da chi lo stia dicendo, perdendo il significato delle parole che dice. Distaccare le due parti sembra impossibile, a meno che non intervengano elementi di contrasto tali da spostarci l'attenzione su cosa stia avvenendo. Cosa succederebbe se un bellissimo discorso venisse interrotto da una conversazione con termini terribili e crudeli? E se invece le parole del peggiore degli esseri umani venissero rimpiazzate da espressioni di pace e fratellanza?
+
+In questo progetto ho provato a cercare i punti di congiunzione tra discorsi differenti ed influenzarli a vicenda, facendone interagire uno con le parole dell'altro.
 
 ## Obiettivi
 
@@ -25,7 +29,15 @@ Gli obiettivi del progetto sono di:
 
 - estrapolare le sillabe da un discorso
 - analizzare ogni sillaba e riuscire a trovarne dei parametri caratterizzanti tali da descriverla nella maniera più accurata possibile
-- ricreare un discorso "in diretta" con le sillabe di un altro discorso precedentemente analizzate
+- ricreare un discorso "in diretta" con i frammenti di un altro discorso precedentemente analizzati
+
+## Risultati
+
+Nella sottocartella ```examples``` è possibile trovare dei file  di esempio utilizzati per la taratura e il test del sistema.
+
+In particolare, i file che terminano con *_model* sono dei modelli precedentemente generati dal sistema e che possono essere caricati dalla patch con i pulsanti *load* e successivamente *train* (per l'aggiornamento dei buffer interni).
+
+I file che terminano con *_results* sono delle registrazioni ottenuti dal sistema. A volte sono del singolo risultato generato, a volte alternano l'audio originale con la parte generata.
 
 ## Dettagli tecnici
 
@@ -56,3 +68,10 @@ Elenco dei pacchetti e programmi aggiuntivi esterni a Max necessari per il funzi
 | Dipendenza | Versione |
 | :-: | :-: |
 | MuBu| 1.9.14 |
+
+### Difficoltà riscontrate
+
+La taratura del sistema è molto delicata e fine. Per cercare i parametri che il sistema caricare di default sono stati effettuati dei testi con il file *practicing_monologue*, che come voce recitata dispone di un'ampia gamma di dinamica all'interno del discorso.
+
+Il riconoscimento delle sillabe è basato su un filtro risonante che se tarato troppo "stretto" a 0Hz e con un Q molto selettivo rischia di andare facilmente in feedback. Per questo e per permettere di rilevare anche sillabe sussurrate è stato tarato con parametri più larghi.
+Di contro, questa taratura comporta che il sistema rilevi molte più sillabe spurie dovute alle oscillazioni, soprattutto se vengono pronunciate da una voce ad alto volume o urlata.
