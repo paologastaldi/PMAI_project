@@ -71,7 +71,7 @@ Elenco dei pacchetti e programmi aggiuntivi esterni a Max necessari per il funzi
 
 ### Difficoltà riscontrate
 
-La taratura del sistema è molto delicata e fine. Per cercare i parametri che il sistema caricare di default sono stati effettuati dei testi con il file *practicing_monologue*, che come voce recitata dispone di un'ampia gamma di dinamica all'interno del discorso.
+La taratura del sistema è molto delicata e fine. Per cercare i parametri che il sistema caricare di default sono stati effettuati dei test con il file *practicing_monologue*, che come voce recitata dispone di un'ampia gamma di dinamica all'interno del discorso.
 
-Il riconoscimento delle sillabe è basato su un filtro risonante che se tarato troppo "stretto" a 0Hz e con un Q molto selettivo rischia di andare facilmente in feedback. Per questo e per permettere di rilevare anche sillabe sussurrate è stato tarato con parametri più larghi.
+Il riconoscimento delle sillabe è basato su un filtro risonante che se tarato troppo "stretto" a 0Hz e con un Q molto selettivo rischia di andare facilmente in feedback. Per questo e per permettere di rilevare anche sillabe sussurrate è stato tarato con parametri più "larghi".
 Di contro, questa taratura comporta che il sistema rilevi molte più sillabe spurie dovute alle oscillazioni, soprattutto se vengono pronunciate da una voce ad alto volume o urlata.
