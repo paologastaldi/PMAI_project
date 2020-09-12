@@ -13,6 +13,7 @@
 + [Obiettivi](#obiettivi)
 + [Risultati](#risultati)
 + [Dettagli tecnici](#dettagli-tecnici)
+    - [Avvio](#avvio)
     - [Funzionamento](#funzionamento)
     - [Dipendenze](#dipendenze)
     - [Difficoltà riscontrate](#difficoltà-riscontrate)
@@ -40,6 +41,10 @@ In particolare, i file che terminano con *_model* sono dei modelli precedentemen
 I file che terminano con *_results* sono delle registrazioni ottenuti dal sistema. A volte sono del singolo risultato generato, a volte alternano l'audio originale con la parte generata.
 
 ## Dettagli tecnici
+
+### Avvio
+
+La patch principale è ```index```. Questa rimanda a 3 sottopatch, chiamate ```wrapper```, che fanno da interfaccia al sistema vero e proprio racchiuso e gestito dalla patch ```voice_switch```.
 
 ### Funzionamento
 
