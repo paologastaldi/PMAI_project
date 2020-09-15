@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "float", "" ],
+					"patching_rect" : [ 231.0, 747.0, 776.0, 22.0 ],
+					"text" : "ircamdescriptor~ 1024 896 @descriptors TotalEnergy PerceptualSpectralCentroid PerceptualSpectralDecrease SpectralCrest SpectralSkewness"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "multislider",
 					"numinlets" : 1,
@@ -367,8 +379,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "float", "" ],
-					"patching_rect" : [ 127.0, 256.0, 776.0, 22.0 ],
-					"text" : "ircamdescriptor~ 1024 896 @descriptors TotalEnergy PerceptualSpectralCentroid PerceptualSpectralDecrease SpectralCrest SpectralSkewness"
+					"patching_rect" : [ 127.0, 256.0, 769.0, 22.0 ],
+					"text" : "ircamdescriptor~ 256 128 @descriptors TotalEnergy PerceptualSpectralCentroid PerceptualSpectralDecrease SpectralCrest SpectralSkewness"
 				}
 
 			}
@@ -380,6 +392,10 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 127.0, 82.0, 35.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "in~ 1"
 				}
 
