@@ -40,14 +40,28 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 289.0, 248.0, 45.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 289.0, 248.0, 45.0, 22.0 ],
+					"text" : "update"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bubble" : 1,
 					"id" : "obj-88",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 291.75, 248.0, 270.0, 24.0 ],
+					"patching_rect" : [ 338.75, 248.0, 270.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 290.0, 249.5, 270.0, 24.0 ],
+					"presentation_rect" : [ 336.0, 248.0, 270.0, 24.0 ],
 					"text" : "Carica / salva delle analisi fatte in precedenza"
 				}
 
@@ -800,7 +814,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-78", 0 ],
+					"midpoints" : [ 34.25, 1058.0, 7.375, 1058.0, 7.375, 7.5, 34.5, 7.5 ],
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 1 ],
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -1249,14 +1271,6 @@
 			}
 , 			{
 				"name" : "mubu.knn.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.concat~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.granular~.mxo",
 				"type" : "iLaX"
 			}
  ],
