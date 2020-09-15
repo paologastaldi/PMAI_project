@@ -368,7 +368,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
 					"patching_rect" : [ 127.0, 300.0, 587.0, 22.0 ],
-					"text" : "route TotalEnergy PerceptualSpectralCentroid PerceptualSpectralDecrease SpectralCrest SpectralSkewness"
+					"text" : "route Loudness PerceptualSpectralCentroid PerceptualSpectralKurtosis SpectralCrest SpectralSkewness"
 				}
 
 			}
@@ -379,8 +379,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "float", "" ],
-					"patching_rect" : [ 127.0, 256.0, 769.0, 22.0 ],
-					"text" : "ircamdescriptor~ 256 128 @descriptors TotalEnergy PerceptualSpectralCentroid PerceptualSpectralDecrease SpectralCrest SpectralSkewness"
+					"patching_rect" : [ 127.0, 256.0, 750.0, 22.0 ],
+					"text" : "ircamdescriptor~ 256 128 @descriptors Loudness PerceptualSpectralCentroid PerceptualSpectralKurtosis SpectralCrest SpectralSkewness"
 				}
 
 			}
@@ -392,10 +392,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 127.0, 82.0, 35.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "in~ 1"
 				}
 
