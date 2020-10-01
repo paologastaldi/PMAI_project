@@ -4,17 +4,17 @@
 
 | Progetto esame del 18-09-2020 | |
 | :- | :-: |
-| Versione | 1.0.0 |
-| Data | 12-09-2020 |
+| Versione | 1.1.0 |
+| Data | 01 / 10 / 2020 |
 
 ## Indice
 
 + [Abstract](#abstract)
 + [Obiettivi](#obiettivi)
 + [Come funziona](#come-funziona)
-+ [Risultati](#risultati)
-+ [Dettagli tecnici](#dettagli-tecnici)
-    - [Più nel dettaglio](#più-nel-dettaglio)
++ [Risultati ottenuti](#risultati-ottenuti)
++ [Informazioni tecniche](#informazioni-tecniche)
+    - [Andiamo nel dettaglio](#andiamo-nel-dettaglio)
     - [Dipendenze esterne](#dipendenze-esterne)
     - [Difficoltà riscontrate](#difficoltà-riscontrate)
 
@@ -49,7 +49,19 @@ Da qui in poi i vari wrapper permetto di fare azioni differenti.
 
 È possibile anche salvare l'analisi effettuata in precedenza con il pulsante *savebuffer*. Per ricaricarla nel sistema invece bisogna premere su *loadbuffer*, scegliere il file e quindi premere su *update*.
 
-## Risultati
+## Risultati ottenuti
+
+### Riconoscimento delle sillabe
+
+La patch ```test_ZFF_2``` è stata utilizzata per creare l'immagine successiva. In seguito sono state aggiunte le sillabe che i vari segmenti andavano a identificare. La porzione di audio è stata estrapolata dal discorso di Barack Obama alla Convention democratica del 2020, che inizia appunto con le parole indicate sull'immagine: *Goodevening everybody*.
+
+![Syllable recognition](./images/goodevening_everybody_obama.png)
+
+Il sistema ha bisogno di una doppia taratura che dipende dalla singola registrazione, sia per l'attacco della sillaba (riconosciuta tramite la ricerca del movimento gutturale), sia per la sua terminazione (riconosciuta con la fine dell'emissione di frequenze formanti della sillaba, ossia delle frequenze utili a identificare la sillaba emessa).
+
+In generale, il sistema sembra essere sempre un po' "in ritardo" sul riconoscimento dell'inizio e della fine della sillaba. Per questo è necessario in seguito delle piccole correzioni tali da adattare meglio la finestra che racchiude la sillaba.
+
+### Alcune esecuzioni
 
 Nella sottocartella ```examples``` è possibile trovare dei file  di esempio utilizzati per la taratura e il test del sistema.
 
@@ -57,9 +69,9 @@ In particolare, i file che terminano con *_model* sono dei modelli precedentemen
 
 I file che terminano con *_results* sono delle registrazioni ottenuti dal sistema. A volte sono del singolo risultato generato, a volte alternano l'audio originale con la parte generata.
 
-## Dettagli tecnici
+## Informazioni tecniche
 
-### Più nel dettaglio
+### Andiamo nel dettaglio
 
 La patch (o meglio, l'insieme di patch) è basato su 4 parti principali, di cui 2 sono componenti di base e 2 invece di più alto livello.
 
@@ -86,10 +98,11 @@ Elenco dei pacchetti e programmi aggiuntivi esterni a Max necessari per il funzi
 | Dipendenza | Versione |
 | :-: | :-: |
 | MuBu| 1.9.14 |
+| Wekinator | 2.1.0.4 |
 
 ### Difficoltà riscontrate
 
-La taratura del sistema è molto delicata e fine. Per cercare i parametri che il sistema caricare di default sono stati effettuati dei test con il file *practicing_monologue*, che come voce recitata dispone di un'ampia gamma di dinamica all'interno del discorso.
+La taratura del sistema è molto delicata. Per cercare i parametri che il sistema caricare di default sono stati effettuati dei test con il file *practicing_monologue*, che come voce recitata dispone di un'ampia gamma di dinamica all'interno del discorso.
 
 Il riconoscimento delle sillabe è basato su un filtro risonante che se tarato troppo "stretto" a 0Hz e con un Q molto selettivo rischia di andare facilmente in feedback. Per questo e per permettere di rilevare anche sillabe sussurrate è stato tarato con parametri più "larghi".
 Di contro, questa taratura comporta che il sistema rilevi molte più sillabe spurie dovute alle oscillazioni, soprattutto se vengono pronunciate da una voce ad alto volume o urlata.
