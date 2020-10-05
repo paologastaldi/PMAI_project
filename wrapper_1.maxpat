@@ -70,8 +70,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 983.5, 489.0, 162.0, 24.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 892.0, 415.0, 201.0, 24.0 ],
 					"text" : "Attiva registrazione su file"
 				}
 
@@ -1508,20 +1506,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "extractor_usystem.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "extractor.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "glottal_core.maxpat",
 				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
@@ -1529,16 +1513,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "autonorm_unit.maxpat",
+				"name" : "wek_comm.maxpat",
 				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "autonorm_core.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
+				"name" : "bach.getcol.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1551,13 +1535,6 @@
 			}
 , 			{
 				"name" : "syllable_play_engine.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "live_autonorm_unit.maxpat",
 				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -1579,7 +1556,39 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ircamdescriptor~.mxo",
+				"name" : "bach.slice.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.join.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.trans.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.sort.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.submatrix.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.minfo.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.flat.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.portal.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.args.mxo",
 				"type" : "iLaX"
 			}
 , 			{
