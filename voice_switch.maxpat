@@ -207,10 +207,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 345.0, 322.0, 35.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out 2"
 				}
 
@@ -400,7 +396,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 1 ],
-					"midpoints" : [ 1052.071428571428442, 193.0, 463.833333333333371, 193.0 ],
+					"midpoints" : [ 1052.071428571428442, 238.0, 463.833333333333371, 238.0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -464,7 +460,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 438.814285714285688, 216.0, 898.757142857142867, 216.0 ],
+					"midpoints" : [ 438.814285714285688, 211.0, 898.757142857142867, 211.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -472,7 +468,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 1 ],
-					"midpoints" : [ 1205.385714285714357, 193.0, 463.833333333333371, 193.0 ],
+					"midpoints" : [ 1205.385714285714357, 245.0, 463.833333333333371, 245.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -525,7 +521,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"midpoints" : [ 510.814285714285688, 181.0, 285.5, 181.0 ],
+					"midpoints" : [ 510.814285714285688, 176.0, 285.5, 176.0 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -582,20 +578,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "extractor_usystem.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "extractor.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "glottal_core.maxpat",
 				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
@@ -603,16 +585,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "autonorm_unit.maxpat",
+				"name" : "wek_comm.maxpat",
 				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "autonorm_core.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
+				"name" : "bach.getcol.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -631,13 +613,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "live_autonorm_unit.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "list_queue_core.maxpat",
 				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
 				"patcherrelativepath" : ".",
@@ -645,22 +620,47 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "play_core.maxpat",
-				"bootpath" : "~/Documents/polito/PMAI/patches/PMAI_project",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
+				"name" : "mubu.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "mubu.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ircamdescriptor~.mxo",
+				"name" : "bach.slice.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "mubu.mxo",
+				"name" : "bach.join.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.trans.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.sort.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.submatrix.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.minfo.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.flat.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.portal.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.args.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -669,14 +669,6 @@
 			}
 , 			{
 				"name" : "mubu.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.concat~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.granular~.mxo",
 				"type" : "iLaX"
 			}
  ],
