@@ -79,7 +79,7 @@ Il primo step è il riconoscimento delle sillabe. Per farlo nella patch ```glott
 
 Il frammento della sillaba così estratto viene quindi analizzato dalla patch ```extractor``` (contenuta in ```extractor_usystem```). L'analisi consiste nell'estrarre 5 descrittori che vadano a caratterizzare la sillaba:
 
-- total energy: per individuare la vocale associata
+- loudness: per individuare la vocale associata
 - perceptual spectral centroid: brillantezza
 - perceptual spectral decrease: coda della sillaba
 - perceptual crest:
