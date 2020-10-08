@@ -55,8 +55,6 @@ Questa sezione serve per l'avvio del sistema. Vengono create le strutture dati e
 In questa sezione è anche possibile caricare una struttura precendentemente riempita o salvare quella attuale tramite i pulsanti _readall_ e _writeall_.
 
 > Come esempio: caricare il file _obama_trump_model.mubu_ dalla cartella _./examples_.
-
-----
  
 ### 1- PREPARE BASE
 
@@ -64,21 +62,15 @@ Qua avviene l'analisi della voce a cui si vorrà applicare il discorso. Dopo ave
 
 > Come esempio: caricare il file _obama_1.mp3_ dalla cartella _./examples_.
 
-----
-
 ### 2- PREPARE LEADER
 
 Sezione molto simile alla precedente, permette di analizzare il discorso vero e proprio che si vuole come risultato. In questa analisi inoltre si fa uso della loudness e del pitch, utili per seguire le inflessioni della voce (accenti, domande, esclamazioni etc.). Vengono analizzate tra l'altro, come si vede nella parte in fondo, le pause tra le parole e tra le frasi. 
 
 > Come esempio: caricare il file _trump_1.mp3_ dalla cartella _./examples_.
 
-----
-
 ### 3- TRAIN
 
 Sezione molto ridotta, necessaria all'allenamento del sistema che associa le sillabe del leader alle sillabe della base.
-
-----
 
 ### 4- PLAY
 
