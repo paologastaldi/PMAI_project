@@ -133,7 +133,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 544.0, 52.0, 28.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"attr_comment" : [ "(int)", "length" ]
+						"attr_comment" : [ "(int)", "max", "length" ]
 					}
 ,
 					"text" : "in 2"
@@ -259,7 +259,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 239.0, 187.0911865234375, 324.0, 22.0 ],
-					"text" : "zl group 100"
+					"text" : "zl group 1000"
 				}
 
 			}
