@@ -136,8 +136,8 @@ Il frammento della sillaba così estratto viene quindi analizzato dalla patch ``
 
 - loudness: per individuare la vocale associata
 - perceptual spectral centroid: brillantezza
-- perceptual spectral kurtosis: coda della sillaba
-- perceptual crest: quanto la cresta è piatta, quindi l'impulsività o meno della sillaba
+- perceptual spectral kurtosis: impulsività e accentuazione della sillaba
+- perceptual crest: quanto la cresta è piatta
 - perceptual skewness: rapporto tra l'attacco e la decadenza della sillaba
 
 <!--
