@@ -109,6 +109,12 @@ Il sistema ha bisogno di una doppia taratura che dipende dalla singola registraz
 
 In generale, il sistema sembra essere sempre un po' "in ritardo" sul riconoscimento dell'inizio e della fine della sillaba. Per questo è necessario in seguito delle piccole correzioni tali da adattare meglio la finestra che racchiude la sillaba, modificando accuratamente l'onset e l'offset in fase di esecuzione.
 
+L'utilizzo di questa tecnica si rivela però essere piuttosto buona per la distinzione tra i frammenti parlati (voiced) e i rumori di sottofondo (unvoiced). Ecco qui di seguito un estratto dal discorso di Donald Trump alla Convention repubblicata del 2020, avvenuto alla Casa Bianca con molti ospiti.
+
+![Applauses](./images/applause_trump.png)
+
+Si può notare come gli applausi vengano evitati del sistema, benché non abbiano un'intensità sonora di molto inferiore. Questo avviene siccome non sono sufficientemente impulsivi nel loro attacco. 
+
 ### Alcune esecuzioni
 
 _(Sezione in fase di aggiornamento)_
