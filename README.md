@@ -19,13 +19,7 @@
     - [Dipendenze esterne](#dipendenze-esterne)
     - [Difficoltà riscontrate](#difficoltà-riscontrate)
 
-
-----
-----
-
 ## Abstract
-
-----
 
 Troppo spesso quando ascoltiamo un discorso ci facciamo influenzare da chi lo stia dicendo, perdendo il significato delle parole che dice. Distaccare le due parti sembra impossibile. E se fosse qualcun altro a pronunciare quel discorso? Stesse parole, stesse frasi, solamente una diversa voce dietro al microfono. Quasi a elevare il discorso in sé a una composizione, a niente più che uno spartito caratterizzato dalle sue sillabe, strutturato nelle sue frasi e colorato con le inflessioni della voce; per andarne poi a cambiare l'esecutore. Forse in quel caso il vero significato ci salterebbe più all'occhio, capiremmo veramente che peso hanno le parole che vengono pronunciate e saremmo in grado di analizzare meglio il discorso. 
 
@@ -35,12 +29,7 @@ Troppo spesso quando ascoltiamo un discorso ci facciamo influenzare da chi lo st
 In questo progetto ho provato a cercare i punti di congiunzione tra discorsi differenti ed influenzarli a vicenda, facendone interagire uno con le parole dell'altro.
 -->
 
-----
-----
-
 ## Obiettivi
-
-----
 
 Gli obiettivi del progetto sono di:
 
@@ -48,13 +37,8 @@ Gli obiettivi del progetto sono di:
 - analizzare ogni sillaba e riuscire a trovarne dei parametri caratterizzanti tali da descriverla nella maniera più accurata possibile
 - ricreare un discorso con i frammenti di un altro discorso precedentemente analizzati
 
-----
-----
-
 ## Come funziona
 _(Sezione in fase di aggiornamento)_
-
-----
 
 Prima di avviare la patch Max è necessario aprire Wekinator e caricare il progetto _basic_set_2_ presente nella cartella _examples_. Questo include un modello già pronto per il rilevamento delle consonanti e delle vocali.
 
@@ -64,15 +48,13 @@ La patch principale è ```test_class``` che ha il seguente aspetto:
 
 È divisa in 5 sezioni, ciascuna indicata da un colore differente. In ciascuna sezione sono indicati dei passaggi da seguire in ordine alfabetico.
 
-----
-
 ### 0- BOOT
 
 Questa sezione serve per l'avvio del sistema. Vengono create le strutture dati essenziali che verranno poi riempite nei passaggi successivi. Viene anche avviato Wekinator che sarà utile per le sezioni 1 e 2.
 
 In questa sezione è anche possibile caricare una struttura precendentemente riempita o salvare quella attuale tramite i pulsanti _readall_ e _writeall_.
 
-> Come esempio: caricare il file _obama_trump_model_ dalla cartella _./examples_.
+> Come esempio: caricare il file _obama_trump_model.mubu_ dalla cartella _./examples_.
 
 ----
  
@@ -80,7 +62,7 @@ In questa sezione è anche possibile caricare una struttura precendentemente rie
 
 Qua avviene l'analisi della voce a cui si vorrà applicare il discorso. Dopo aver scelto il file audio si passa ad estrarne le sillabe e catalogarle tramite il modello su Wekinator. I risultati dell'analisi e i tempi che indicato onset e offset delle sillabe vengono poi salvati in apposite tabelle in buffer MuBu.
 
-> Come esempio: caricare il file _obama_1_ dalla cartella _./examples_.
+> Come esempio: caricare il file _obama_1.mp3_ dalla cartella _./examples_.
 
 ----
 
@@ -88,7 +70,7 @@ Qua avviene l'analisi della voce a cui si vorrà applicare il discorso. Dopo ave
 
 Sezione molto simile alla precedente, permette di analizzare il discorso vero e proprio che si vuole come risultato. In questa analisi inoltre si fa uso della loudness e del pitch, utili per seguire le inflessioni della voce (accenti, domande, esclamazioni etc.). Vengono analizzate tra l'altro, come si vede nella parte in fondo, le pause tra le parole e tra le frasi. 
 
-> Come esempio: caricare il file _trump_1_ dalla cartella _./examples_.
+> Come esempio: caricare il file _trump_1.mp3_ dalla cartella _./examples_.
 
 ----
 
@@ -123,12 +105,7 @@ Da qui in poi i vari wrapper permetto di fare azioni differenti.
 
 -->
 
-----
-----
-
 ## Risultati ottenuti
-
-----
 
 ### Riconoscimento delle sillabe
 
@@ -139,8 +116,6 @@ La patch ```test_ZFF_2``` è stata utilizzata per creare l'immagine successiva. 
 Il sistema ha bisogno di una doppia taratura che dipende dalla singola registrazione, sia per l'attacco della sillaba (riconosciuta tramite la ricerca del movimento gutturale), sia per la sua terminazione (riconosciuta con la fine dell'emissione di frequenze formanti della sillaba, ossia delle frequenze utili a identificare la sillaba emessa).
 
 In generale, il sistema sembra essere sempre un po' "in ritardo" sul riconoscimento dell'inizio e della fine della sillaba. Per questo è necessario in seguito delle piccole correzioni tali da adattare meglio la finestra che racchiude la sillaba, modificando accuratamente l'onset e l'offset in fase di esecuzione.
-
-----
 
 ### Alcune esecuzioni
 
@@ -155,12 +130,7 @@ I file che terminano con *_results* sono delle registrazioni ottenuti dal sistem
 
 La cartella *basic_set_2* contiene il modello Wekinator necessario per il funzionamento della patch. Evitare di modificarne il contenuto.
 
-----
-----
-
 ## Informazioni tecniche
-
-----
 
 ### Andiamo nel dettaglio
 
@@ -194,7 +164,6 @@ Queste 2 patch appena descritte vengono utilizzate per l'analisi e il training d
 Per l'esecuzione invece si utilizza la patch ```syllable_play_engine```, che permette di rilevare ed analizzare "in diretta" le sillabe contenute nel segnale in ingresso, andare a cercare per ciascuna la sillaba più prossima dal set di training e riprodurla. 
 
 -->
-----
 
 ### Usiamo Wekinator
 
@@ -206,8 +175,6 @@ Il sistema è stato quindi allenato partendo da 44 registrazioni delle unità fo
 
 Il modello è stato creato tramite l'algoritmo SVM con kernel RGB che permette di identificare cluster dalle forme e dagli incastri molto complicati.
 
-----
-
 ### Dipendenze esterne
 
 Elenco dei pacchetti e programmi aggiuntivi esterni a Max necessari per il funzionamento della patch.
@@ -216,8 +183,6 @@ Elenco dei pacchetti e programmi aggiuntivi esterni a Max necessari per il funzi
 | :-: | :-: |
 | MuBu| 1.9.14 |
 | Wekinator | 2.1.0.4 |
-
-----
 
 ### Difficoltà riscontrate
 
