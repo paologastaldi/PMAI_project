@@ -137,7 +137,7 @@ Nella cartella _results_ sono possibili delle registrazioni dell'audio generato.
  - `name1`: base audio, voce usata per pronunciare il discorso
  - `name2`: leader audio, voce da cui è stato estrapolato il discorso 
  - `tech`: algoritmo utilizzato dal Wekinator per la classificazione
- - `exxt`: estensione del file (aiff solitamente)
+ - `ext`: estensione del file (aiff solitamente)
 
 ## Informazioni tecniche
 
